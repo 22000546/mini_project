@@ -76,17 +76,17 @@ int saveData(Product *p, int index) {
 }
 
 int loadData(Product *p) {
-	int count = 0;
-	int num = 0;
+	int num;
+	FILE *fp = fopen("product.txt", "rt");
 	for(num = 0; num < 20; num ++){
-		fscanf(fp, "%s", p[i].name);
+		fscanf(fp, "%s", p[num].name);
 		if(feof(fp))
 			break;
 		fscanf(fp, "%d %d %d %d", p[i].weight, p[i].price, p[i].stars, p[i].numStars);
 	}
 	fclose(fp);
 	printf("파일을 성공적으로 로딩했습니다.\n\n");
-	return 1;
+	return num;
 }
 
 #endif
