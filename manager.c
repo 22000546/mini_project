@@ -15,4 +15,20 @@ int listProduct(Product *p, int index){
     printf("\n");
     return 1;
 }
+
+void searchProduct(Product *p, int index) {
+	int searchcnt = 0;
+	char search[50];
+
+	getchar();
+	printf("검색할 내용을 입력해주세요. :");
+	scanf("%[^\n]s", search);
+	if(strstr(p->name, search)) {
+		readProduct(*p);
+		searchcnt ++;
+	}
+	if(searchcnt == 0)
+		printf("\n%s\n에 대한 결과가 없습니다.\n", search);
+}
+
 #endif
