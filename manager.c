@@ -17,7 +17,7 @@ int listProduct(Product *p, int index){
     return 1;
 }
 
-void searchProduct(Product *p, int index) {
+void searchProductName(Product *p, int index) {
 	int searchcnt = 0;
 	char search[50];
 
