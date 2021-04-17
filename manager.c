@@ -1,6 +1,7 @@
 #ifndef _MANAGER_H
 #define _MANAGER_H
 #include <stdio.h>
+#include <string.h>
 #include "product.h"
 #include "manager.h"
 
