@@ -75,4 +75,18 @@ int saveData(Product *p, int index) {
 	return 1;
 }
 
+int loadData(Product *p) {
+	int count = 0;
+	int num = 0;
+	for(num = 0; num < 20; num ++){
+		fscanf(fp, "%s", p[i].name);
+		if(feof(fp))
+			break;
+		fscanf(fp, "%d %d %d %d", p[i].weight, p[i].price, p[i].stars, p[i].numStars);
+	}
+	fclose(fp);
+	printf("파일을 성공적으로 로딩했습니다.\n\n");
+	return 1;
+}
+
 #endif
