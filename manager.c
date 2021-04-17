@@ -40,7 +40,7 @@ void searchProductWeight(Product *p, int index) {
 
 	printf("검색하고 싶은 상품의 무게 범위를 선택해주세요. :");
 	printf("1: 0~100\t2: 101~200\t3: 201~300\t4: 301~400\t...");
-	scanf("%d", search);
+	scanf("%d", &search);
 	for(int i = 0; i < index; i ++) {
 		if((p[i].weight > (search-1)*100)&&(p[i].weight <= search*100)) {
 			readProduct(p[i]);
@@ -48,7 +48,7 @@ void searchProductWeight(Product *p, int index) {
 		}
 	}
 	if(searchcnt == 0)
-		printf("\n%s\n에 대한 검색 결과가 없습니다.\n", search);
+		printf("\n검색 결과가 없습니다.\n");
 }
 
 void searchProductPrice(Product *p, int index) {
