@@ -31,4 +31,11 @@ void searchProduct(Product *p, int index) {
 		printf("\n%s\n에 대한 결과가 없습니다.\n", search);
 }
 
+int saveData(Product *p, int index) {
+	FILE *fp = fopen("product.txt", "wt");
+	fprintf(fp, "%s %d %d %d %d\n", p->name, p->weight, p->price, p->stars, p->numStars);
+	fclose(fp);
+	return 1;
+}
+
 #endif
