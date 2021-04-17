@@ -85,7 +85,7 @@ int loadData(Product *p) {
 		fscanf(fp, "%s", p[i].name);
 		if(feof(fp))
 			break;
-		fscanf(fp, "%d %d %d %d", p[i].weight, p[i].price, p[i].stars, p[i].numStars);
+		fscanf(fp, "%d %d %d %d", &p[i].weight, &p[i].price, &p[i].stars, &p[i].numStars);
 	}
 	fclose(fp);
 	printf("파일을 성공적으로 로딩했습니다.\n\n");
