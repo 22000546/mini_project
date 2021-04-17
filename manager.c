@@ -51,6 +51,23 @@ void searchProductWeight(Product *p, int index) {
 		printf("\n%s\n에 대한 검색 결과가 없습니다.\n", search);
 }
 
+void searchProductPrice(Product *p, int index) {
+	int searchcnt = 0;
+	int search;
+
+	printf("검색하고 싶은 상품의 가격대를 선택해주세요. :");
+	printf("1: 0~10,000\t2: 10,001~20,000\t3: 20,001~30,000\t4: 30,001~40,000\t...");
+	scanf("%d", search);
+	for(int i = 0; i < index; i ++) {
+		if((p[i].price > (search-1)*10000)&&(p[i].price <= search*10000)) {
+			readProduct(p[i]);
+			searchcnt ++;
+		}
+	}
+	if(searchcnt == 0)
+		printf("\n%s\n에 대한 검색 결과가 없습니다.\n", search);
+}
+
 int saveData(Product *p, int index) {
 	FILE *fp = fopen("product.txt", "wt");
 	fprintf(fp, "%s %d %d %d %d\n", p->name, p->weight, p->price, p->stars, p->numStars);
