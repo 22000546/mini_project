@@ -22,14 +22,16 @@ void searchProduct(Product *p, int index) {
 	char search[50];
 
 	getchar();
-	printf("검색할 내용을 입력해주세요. :");
+	printf("검색하고 싶은 상품의 이름을 입력해주세요. :");
 	scanf("%[^\n]s", search);
-	if(strstr(p->name, search)) {
-		readProduct(*p);
-		searchcnt ++;
+	for(int i = 0; i < index; i ++) {
+		if(strstr(p[i].name, search)) {
+			readProduct(p[i]);
+			searchcnt ++;
+		}
 	}
 	if(searchcnt == 0)
-		printf("\n%s\n에 대한 결과가 없습니다.\n", search);
+		printf("\n%s\n에 대한 검색 결과가 없습니다.\n", search);
 }
 
 int saveData(Product *p, int index) {
