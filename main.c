@@ -64,6 +64,9 @@ int main() {
 		else if(menu == 6) {
 			searchProductWeight(plist, index);
 		}
+		else if(menu == 7) {
+			searchProductName(Plist, index);
+		}
 	}
 
 	return 0;
