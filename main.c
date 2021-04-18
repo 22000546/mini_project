@@ -69,7 +69,8 @@ int main() {
 		}
 		else if(menu == 8) {
 			checker = saveData(plist, index);
-			printf("=> 상품 리스트가 product.txt로 저장되었습니다.\n\n");
+			if(checker == 1)
+				printf("=> 상품 리스트가 \"product.txt\"로 저장되었습니다.\n\n");
 		}
 		else if(menu == 9) {
 			checker = loadData(plist);
