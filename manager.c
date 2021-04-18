@@ -72,7 +72,7 @@ void searchProductPrice(Product *p, int index) {
 int saveData(Product *p, int index) {
 	FILE *fp = fopen("product.txt", "wt");
 	for(int i = 0; i < index; i ++) {
-		if(strcmp(p[i].name, "noname"))
+		if(strcmp(p[i].name, "noname") == 0)
 			continue;
 		fprintf(fp, "%s %d %d %d %d\n", p[i].name, p[i].weight, p[i].price, p[i].stars, p[i].numStars);
 	}
