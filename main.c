@@ -58,6 +58,9 @@ int main() {
 				}
 			}
 		}
+		else if(menu == 5) {
+			searchProductName(plist, index);
+		}
 	}
 
 	return 0;
