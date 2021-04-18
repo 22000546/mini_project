@@ -65,12 +65,13 @@ int main() {
 			searchProductWeight(plist, index);
 		}
 		else if(menu == 7) {
-			searchProductName(Plist, index);
+			searchProductName(plist, index);
 		}
 		else if(menu == 8) {
 			checker = saveData(plist, index);
-			printf("=> 상품 리스트가 product.txt로 저장되었습니다.\n\n"):
+			printf("=> 상품 리스트가 product.txt로 저장되었습니다.\n\n");
 		}
+	}
 
 	return 0;
 }
