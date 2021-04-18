@@ -65,7 +65,7 @@ int main() {
 			searchProductWeight(plist, index);
 		}
 		else if(menu == 7) {
-			searchProductName(plist, index);
+			searchProductPrice(plist, index);
 		}
 		else if(menu == 8) {
 			checker = saveData(plist, index);
