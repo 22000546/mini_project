@@ -25,6 +25,11 @@ int main() {
 			if(checker == 1)
 				printf("=> 제품이 성공적으로 등록되었습니다.\n\n");
 		}
+		else if(menu == 2) {
+			checker = listProduct(plist, index);
+			if(checker == 1)
+				printf("=> 상품 목록이 정상적으로 출력되었습니다.\n\n");
+		}
 	}
 
 	return 0;
