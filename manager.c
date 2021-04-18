@@ -22,7 +22,8 @@ void searchProductName(Product *p, int index) {
 	char search[50];
 
 	getchar();
-	printf("검색하고 싶은 상품의 이름을 입력해주세요. :");
+	printf("검색하고 싶은 상품의 이름을 입력해주세요. \n");
+	printf("이름 : ");
 	scanf("%[^\n]s", search);
 	for(int i = 0; i < index; i ++) {
 		if(strstr(p[i].name, search)) {
@@ -38,8 +39,8 @@ void searchProductWeight(Product *p, int index) {
 	int searchcnt = 0;
 	int search;
 
-	printf("검색하고 싶은 상품의 무게 범위를 선택해주세요. :");
-	printf("1: 0~100\t2: 101~200\t3: 201~300\t4: 301~400\t...");
+	printf("검색하고 싶은 상품의 무게 범위를 선택해주세요. \n");
+	printf("1(0~100)\t2(101~200)\t3(201~300)\t4(301~400)\t... : ");
 	scanf("%d", &search);
 	for(int i = 0; i < index; i ++) {
 		if((p[i].weight > (search-1)*100)&&(p[i].weight <= search*100)) {
@@ -55,8 +56,8 @@ void searchProductPrice(Product *p, int index) {
 	int searchcnt = 0;
 	int search;
 
-	printf("검색하고 싶은 상품의 가격대를 선택해주세요. :");
-	printf("1: 0~10,000\t2: 10,001~20,000\t3: 20,001~30,000\t4: 30,001~40,000\t...");
+	printf("검색하고 싶은 상품의 가격대를 선택해주세요. \n");
+	printf("1(0~10000)\t2(10001~20000)\t3(20001~300)\t4(30001~40000)\t... : ");
 	scanf("%d", &search);
 	for(int i = 0; i < index; i ++) {
 		if((p[i].price > (search-1)*10000)&&(p[i].price <= search*10000)) {
