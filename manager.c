@@ -114,7 +114,7 @@ int selectMenu() {
 
 int selectNumber(Product *p, int index) {
 	int num;
-	listScore(s, count);
+	listProduct(p, index);
 	printf("원하는 번호를 선택해주세요. (취소 : 0)\n");
 	scanf("%d", &num);
 	return num;
