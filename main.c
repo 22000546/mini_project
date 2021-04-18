@@ -74,8 +74,10 @@ int main() {
 		}
 		else if(menu == 9) {
 			checker = loadData(plist);
-			if(checker == 1)
+			if(checker > 0) {
 				printf("=> \"product.txt\"로부터 상품 리스트를 가져왔습니다.\n\n");
+				count = index = checker;
+			}
 		}
 	}
 
