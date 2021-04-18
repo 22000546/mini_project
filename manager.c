@@ -57,7 +57,7 @@ void searchProductPrice(Product *p, int index) {
 	int search;
 
 	printf("검색하고 싶은 상품의 가격대를 선택해주세요. \n");
-	printf("1(0~10000)\t2(10001~20000)\t3(20001~300)\t4(30001~40000)\t... : ");
+	printf("1(0~10000)\t2(10001~20000)\t3(20001~30000)\t4(30001~40000)\t... : ");
 	scanf("%d", &search);
 	for(int i = 0; i < index; i ++) {
 		if((p[i].price > (search-1)*10000)&&(p[i].price <= search*10000)) {
