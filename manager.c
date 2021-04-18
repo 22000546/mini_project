@@ -93,4 +93,20 @@ int loadData(Product *p) {
 	return i;
 }
 
+int selectMenu() {
+	int menu;
+	printf("\n원하는 메뉴의 번호를 입력해주십시오.\n");
+	printf("1. 상품 추가\n");
+	printf("2. 상품 보기\n");
+	printf("3. 상품 정보 업데이트\n");
+	printf("4. 상품 삭제\n");
+	printf("5. 상품 이름으로 검색\n");
+	printf("6. 상품 무게로 검색\n");
+	printf("7. 상품 가격으로 검색\n");
+	printf("8. 상품 리스트 저장\n");
+	printf("9. 상품 리스트 로드\n");
+	printf("10. 프로그램 종료\n");
+	return menu;
+}
+
 #endif
