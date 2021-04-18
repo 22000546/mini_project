@@ -39,6 +39,23 @@ int main() {
 				printf("=> 제품 수정이 취소되었습니다.\n\n");
 			}
 		}
+		else if(menu == 4) {
+			int no = selectNumber(plist, index);
+			if(no > 0) {
+				int isdel;
+				printf("=> 선택한 번호 : %d\n", no);
+				printf("=> 정말로 삭제하시겠습니까? (삭제 : 1)\n");
+				scanf("%d", &isdel);
+				if(isdel == 1) {
+					if(deleteProduct(plist[no-1]) == 1) {
+						listProduct(plist);
+						count --;
+						printf("=> 제품이 성공적으로 삭제되었습니다.\n\n");
+					}
+				} else {
+					printf("=> 제품 삭제가 취소되었습니다.");
+				}
+			}
 	}
 
 	return 0;
